@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AWS SSO Account Alert
 // @namespace    https://github.com/rayos006/aws-console-tampermonkey
-// @version      1.0
+// @version      1.1
 // @description  Display AWS account and assumed role in a color coded fashion!
 // @author       rayos006
 // @match        https://*.console.aws.amazon.com/*
@@ -58,7 +58,7 @@ function addInfo() {
   var bgColor = intToRGB(hashCode(account));
   if (account_name.includes("prd") || account_name.includes("prd") || account_name.split("-") < 2) {
       style.innerHTML = `.mh-account {
-      padding: 4px !important;
+      padding: 11px !important;
      color: ${getContrastYIQ(bgColor)} !important;
       background-color: #${bgColor} !important;
       text-shadow: 0 0 0 #000;
@@ -67,7 +67,7 @@ function addInfo() {
       }`;
   } else {
       style.innerHTML = `.mh-account {
-      padding: 4px !important;
+      padding: 11px !important;
      color: ${getContrastYIQ(bgColor)} !important;
       background-color: #${bgColor} !important;
       text-shadow: 0 0 0 #000;
