@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AWS SSO Account Alert
 // @namespace    https://github.com/rayos006/aws-console-tampermonkey
-// @version      1.1
+// @version      1.2
 // @description  Display AWS account and assumed role in a color coded fashion!
 // @author       rayos006
 // @match        https://*.console.aws.amazon.com/*
@@ -56,7 +56,7 @@ function addInfo() {
   // Add Style
   var style = document.createElement("style");
   var bgColor = intToRGB(hashCode(account));
-  if (account_name.includes("prd") || account_name.includes("prd") || account_name.split("-") < 2) {
+  if (account_name.includes("prd") || account_name.includes("platform") || account_name.split("-").length < 3) {
       style.innerHTML = `.mh-account {
       padding: 11px !important;
      color: ${getContrastYIQ(bgColor)} !important;
@@ -98,4 +98,19 @@ function hashCode(str) {
 function intToRGB(i) {
   var c = (i & 0x00ffffff).toString(16).toUpperCase();
   return "00000".substring(0, 6 - c.length) + c;
-}
+}// ==UserScript==
+// @name         New Userscript
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       You
+// @match        http://*/*
+// @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // Your code here...
+})();
