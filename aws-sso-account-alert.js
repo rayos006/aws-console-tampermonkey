@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         AWS SSO Account Alert
 // @namespace    https://github.com/rayos006/aws-console-tampermonkey
-// @version      1.2
+// @version      1.3
 // @description  Display AWS account and assumed role in a color coded fashion!
 // @author       rayos006
 // @match        https://*.console.aws.amazon.com/*
+// @match        https://*.console.amazonaws-us-gov.com/*
 // @grant        none
 // @updateURL    https://raw.githubusercontent.com/rayos006/aws-console-tampermonkey/master/aws-sso-account-alert.js
 // @downloadURL  https://raw.githubusercontent.com/rayos006/aws-console-tampermonkey/master/aws-sso-account-alert.js
