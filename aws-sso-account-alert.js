@@ -38,6 +38,8 @@ function addInfo() {
   var account = document.querySelector("div[data-testid='account-detail-menu']")
       .children[0]
       .children[0]
+      .children[0]
+      .children[0]
       .children[1]
       .innerText
       .replaceAll("-", "");
